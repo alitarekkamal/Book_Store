@@ -74,9 +74,16 @@ function router() {
                     debug('connected correctly to server');
 
                     const db = client.db(dbName);
+
                     const offer = await db.collection('offers'); //.insertMany(Offers);
+
                     const response = await db.collection('books'); //.insertMany(books);
-                    const result = [response, offer];
+                    const books = await response.find().toArray();
+                    const offers = await offer.find().toArray();
+                    console.log(books);
+
+                    const result = [books, offers];
+
                     res.json(result);
                 } catch (err) {
                     debug(err.stack);
@@ -86,20 +93,24 @@ function router() {
         });
     return adminroute;
 }
+
+
 module.exports = router;
 
-
-//module.exports = router; function offerRouter(nav) {
+// function offerRouter(nav) {
 //     adminroute.route('/admin')
 //         .get((req, res) => {
 //             const url = 'mongodb://localhost:27017';
 //             const dbName = 'libApp';
+
 //             (async function mongo() {
 //                 let client;
 //                 try {
 //                     client = await MongoClient.connect(url);
 //                     debug('connected correctly to server');
+
 //                     const db = client.db(dbName);
+
 //                     const offer = await db.collection('offers').insertMany(Offers);
 //                     res.json(offer);
 //                 } catch (err) {
@@ -110,4 +121,5 @@ module.exports = router;
 //         });
 //     return adminroute;
 // }
+
 // module.exports = offerRouter;
