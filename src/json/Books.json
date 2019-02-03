@@ -1,0 +1,60 @@
+    // const books = [{
+    //         name: 'Reach a Wider Audience',
+    //         price: ' 150 $',
+    //         img: 'http://api.randomuser.me/portraits/thumb/men/55.jpg',
+    //         authors: 'Ali Tarek'
+    //     },
+    //     {
+    //         name: 'Repurpose Content ',
+    //         price: ' 200 $',
+    //         img: 'http://api.randomuser.me/portraits/thumb/men/59.jpg',
+    //         authors: 'ahmed Tarek'
+    //     },
+    //     {
+    //         name: '14 Useful Sites for Designers',
+    //         price: ' 175 $',
+    //         img: 'http://api.randomuser.me/portraits/thumb/men/57.jpg',
+    //         authors: 'ghadeer Tarek'
+    //     },
+    //     {
+    //         name: 'Dramatically Raise the Value of Any Piece',
+    //         price: ' 250 $',
+    //         img: 'http://api.randomuser.me/portraits/thumb/men/56.jpg',
+    //         authors: ' Tarek'
+
+    //     }
+    // ];
+
+
+
+
+
+    -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+
+
+    const books = [{
+            name: 'Reach a Wider Audience',
+            price: ' 150 $',
+            img: 'http://api.randomuser.me/portraits/thumb/men/55.jpg',
+            authors: 'Ali Tarek'
+        },
+        {
+            name: 'Repurpose Content ',
+            price: ' 200 $',
+            img: 'http://api.randomuser.me/portraits/thumb/men/59.jpg',
+            authors: 'ahmed Tarek'
+        },
+        {
+            name: '14 Useful Sites for Designers',
+            price: ' 175 $',
+            img: 'http://api.randomuser.me/portraits/thumb/men/57.jpg',
+            authors: 'ghadeer Tarek'
+        },
+        {
+            name: 'Dramatically Raise the Value of Any Piece',
+            price: ' 250 $',
+            img: 'http://api.randomuser.me/portraits/thumb/men/56.jpg',
+            authors: ' Tarek'
+
+        }
+    ];

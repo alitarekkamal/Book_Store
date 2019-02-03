@@ -1,0 +1,41 @@
+{
+    "name": "new-node-app",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "DEBUG=app, app:* node app.js"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "bootstrap3": "^3.3.5",
+        "chalk": "^2.4.2",
+        "debug": "^4.1.1",
+        "ejs": "^2.6.1",
+        "express": "^4.16.4",
+        "jquery": "^3.3.1",
+        "mongodb": "^3.1.13",
+        "morgan": "^1.9.1",
+        "nodemon": "^1.18.9",
+        "path": "^0.12.7",
+        "pug": "^2.0.3"
+    },
+    "devDependencies": {
+        "eslint": "^5.12.1",
+        "eslint-config-airbnb-base": "^13.1.0",
+        "eslint-plugin-import": "^2.14.0"
+    },
+    "nodemon": {
+        "restartable": "rs",
+        "ignore": [
+            "node_modules/**/node_modules"
+        ],
+        "delay": "2500"
+    },
+    "env": {
+        "NODE_ENV": "development",
+        "PORT": 8000
+    }
+}
