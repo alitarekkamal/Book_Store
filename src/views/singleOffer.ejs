@@ -63,8 +63,8 @@
           <div class="row">
             <div class="col-sm-12">
               <h2>
-              <img alt="" src="<%=offer.img%>" style="width:30;height:30" class="img-circle">
-              <%=offer.name%>
+              <img alt="" style="width:50px;height:50px" class="img-circle" src="<%=offer.details.image_url%>" >
+              <%=offer.details.title%>
               </h2>		
             </div>
           </div>
@@ -95,27 +95,26 @@
           
           
           <!--/stories-->
-         
           <div class="row">    
-            <br>
-            <div class="col-md-2 col-sm-3 text-center">
-              <a class="story-title" href="<%=offer.img%>"><img alt="" src="<%=offer.img%>" style="width:100px;height:100px" class="img-circle"></a>
+          <br>
+          <div class="col-md-2 col-sm-3 text-center">
+            <a class="story-title" href="<%=offer.details.image_url%>"><img alt="" src="<%=offer.details.image_url%>" style="width:100px;height:100px" class="img-circle"></a>
+          </div>
+          <div class="col-md-10 col-sm-9">
+            <h3><%=offer.details.title%></h3>
+            <div class="row">
+              <div class="col-xs-9">
+                <h4><span class="label label-default">price</span><%=offer.price%></h4><h4>
+                <strong style="font-family:courier,'new courier';" class="text-muted"><%=offer.details.authors.author.name%>  </strong>
+
+
+                  <h2>Book name is : <%=offer.details.title%></h2>
+                  <h2>price was :<span style="color:red;"><del> <%=offer.price%></del></span> </h2>
+                  <h2>Buy Now : <span style="color:green;"><%=offer.price%></span></h2>
+                </h4></div>
+              <div class="col-xs-3"></div>
             </div>
-            <div class="col-md-10 col-sm-9">
-              <h3><%=offer.name%></h3>
-              <div class="row">
-                <div class="col-xs-9">
-                  <h4><span class="label label-default">price</span><%=offer.price%></h4><h4>
-                  <small style="font-family:courier,'new courier';" class="text-muted"><%=offer.authors%> • 
-
-
-                    <h2>Book name is : <%=offer.name%></h2>
-                    <h2>price was :<del style="color:red;"> <%=offer.price%> </del></h2>
-                    <h2>Buy Now : <span style="color:green;"><%=offer.sale%></span></h2>
-                  </h4></div>
-                <div class="col-xs-3"></div>
-              </div>
-              <br><br>
+            <br> <%=offer.details.description%> <br>
             </div>
           </div>
           <hr>

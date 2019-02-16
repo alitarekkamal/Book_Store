@@ -63,8 +63,8 @@
           <div class="row">
             <div class="col-sm-12">
               <h2>
-              <img alt="" src="<%=book.img%>" style="width:30;height:30" class="img-circle">
-              <%=book.name%>
+              <img alt="" style="width:50px;height:50px" class="img-circle" src="<%=book.details.image_url%>">
+              <%=book.details.title%>
               </h2>		
             </div>
           </div>
@@ -99,23 +99,23 @@
           <div class="row">    
             <br>
             <div class="col-md-2 col-sm-3 text-center">
-              <a class="story-title" href="<%=book.img%>"><img alt="" src="<%=book.img%>" style="width:100px;height:100px" class="img-circle"></a>
+              <a class="story-title" href="<%=book.details.image_url%>"><img alt="" src="<%=book.details.image_url%>" style="width:100px;height:100px" class="img-circle"></a>
             </div>
             <div class="col-md-10 col-sm-9">
-              <h3><%=book.name%></h3>
+              <h3><%=book.details.title%></h3>
               <div class="row">
                 <div class="col-xs-9">
                   <h4><span class="label label-default">price</span><%=book.price%></h4><h4>
-                  <small style="font-family:courier,'new courier';" class="text-muted"><%=book.authors%> • 
+                  <strong style="font-family:courier,'new courier';" class="text-muted"><%=book.details.authors.author.name%>  </strong>
 
 
-                    <h2>Book name is : ><%=book.name%></h2>
+                    <h2>Book name is : <%=book.details.title%></h2>
                     <h2>price is : <%=book.price%> </h2>
 
                   </h4></div>
                 <div class="col-xs-3"></div>
               </div>
-              <br><br>
+              <br> <%=book.details.description%> <br>
             </div>
           </div>
           <hr>

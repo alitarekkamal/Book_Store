@@ -1,12 +1,21 @@
 const express = require('express');
-
+const bookController = require('../controllers/bookController')
+const bookService = require('../services/goodreadsService');
 const offersRoute = express.Router();
 
 const { MongoClient, ObjectID } = require('mongodb');
 const debug = require('debug')('app:offersRoute');
 
 function router(nav) {
+    const { getIndex, getById } = bookController(bookService, nav);
     offersRoute.route('/offers')
+        .all((req, res, next) => {
+            if (req.user) {
+                next();
+            } else {
+                res.redirect('/');
+            }
+        })
         .get((req, res) => {
             const { id } = req.params;
             const url = 'mongodb://localhost:27017';
@@ -53,6 +62,7 @@ function router(nav) {
                     const col = await db.collection('offers');
                     const offer = await col.findOne({ _id: new ObjectID(id) });
                     debug(offer);
+                    offer.details = await bookService.getBookById(offer.bookId);
                     res.render('singleOffer', {
                         title: 'Good Offer For You',
                         nav,
